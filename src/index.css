@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-bg-light: #f5f5f0;
+    --color-bg-dark: #240f3d;
+    --color-text-light: #240f3d;
+    --color-text-dark: #F3EFFF;
+    --color-hover-light: #7A49A5;
+    --color-hover-dark: #A855F7;
+}
