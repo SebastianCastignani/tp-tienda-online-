@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useTheme } from "../context/ModeContext";
 import { FiSearch, FiShoppingCart, FiMenu, FiMoon, FiSun } from "react-icons/fi";
+import milogo from "../assets/logo.png"
 
 function Header() {
   const {tema, toggleTema} = useTheme();
@@ -22,7 +23,7 @@ function Header() {
           <>
             
             <div className="flex items-center gap-20 flex-1">
-              <Link to="/"><img src="logo.png" alt="Logo Pagina" className="w-12 h-12" /></Link>
+              <Link to="/"><img src={milogo} alt="Logo Pagina" className="w-12 h-12" object-contain/></Link>
               <div className="hidden md:block flex-1">
                 <input type="text" placeholder="Buscar productos..."
                        className="w-96 px-4 py-2 rounded-full border-2 border-bg-dark dark:border-bg-light text-text-light dark:text-text-dark" />
