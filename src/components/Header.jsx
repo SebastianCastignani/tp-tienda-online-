@@ -32,10 +32,10 @@ function Header() {
               alt="Logo de la tienda" 
               className="w-12 h-12 object-contain rounded-xl shadow-sm"/>
         </Link>
+            {/* Agregue el nombre de la tienda, puede cambiar */}
             <div className="flex items-center gap-1">
               <h1 className="text-4xl font-black italic tracking-tighter text-text-light dark:text-text-dark"> 1001</h1>
             </div>
-
 
               <div className="hidden md:block flex-1">
                 <input type="text" placeholder="Buscar productos..."
