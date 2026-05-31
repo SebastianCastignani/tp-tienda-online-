@@ -1,17 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import milogo from "../assets/logo.png"
+import { useTheme } from "../context/ModeContext";
+import { useState, useEffect } from "react"; 
+
+import logoParaFondoClaro from "../assets/logo-claro.png";
+import logoParaFondoOscuro from "../assets/logo-oscuro.png";
+import InfoBanner from '../components/InfoBanner';
 
 const Inicio = () => {
+  const {tema, toggleTema} = useTheme();
+  
   return (
     <div className="min-h-screen bg-white dark:bg-bg-dark text-text-light dark:text-text-dark">
-      
-      {/* SECCIÓN 1: BANNER PRINCIPAL (HERO) */}
+      <InfoBanner /> 
+      {/* BANNER PRINCIPAL */}
       <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden">
         {/* Imagen de fondo */}
         <img 
           src="https://images.unsplash.com/photo-1547119957-637f8679db1e?q=80&w=1200&auto=format&fit=crop" 
-          alt="1001" 
+          alt="Banner Principal" 
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Capa oscura para que el texto resalte */}
@@ -33,7 +40,13 @@ const Inicio = () => {
         <section className="py-16 px-6 max-w-4xl mx-auto text-center">
           {/* Placeholder de Logo */}
           <div className="w-24 h-24 bg-bg-dark dark:bg-bg-light mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-xl rotate-3 hover:rotate-0 transition-transform">
-            <Link to="/"><img src={milogo} alt="Logo Pagina" className="w-16 h-16" object-contain/></Link>
+              <Link to="/">
+                       <img 
+                         src={tema === "light" ? logoParaFondoClaro : logoParaFondoOscuro} 
+                         alt="Logo de la tienda" 
+                         className="w-21 h-21 object-contain rounded-xl shadow-sm" 
+                       />
+              </Link> 
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase tracking-tight">
@@ -43,11 +56,20 @@ const Inicio = () => {
           <div className="w-20 h-1 bg-black dark:bg-white mx-auto mb-6"></div>
 
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed italic">
-            "Nacimos con la idea de llevar tecnología de punta a cada rincón, priorizando 
-            siempre la honestidad y la rapidez en el servicio. Somos más que una tienda, 
-            somos tu aliado digital."
+            Tu setup, tus reglas. Nos dedicamos a equipar tu espacio con periféricos de alto rendimiento y hardware de última generación.
           </p>
         </section>
+
+
+
+
+
+
+
+
+
+
+
       </div>
   );
 };

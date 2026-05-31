@@ -10,4 +10,11 @@
     --color-text-dark: #F3EFFF;
     --color-hover-light: #7A49A5;
     --color-hover-dark: #A855F7;
+
+
+    @keyframes fade-in-out {
+        0%, 100% { opacity: 0; transform: translateY(5px); }
+        15%, 85% { opacity: 1; transform: translateY(0); }
+    }
+    --animate-fade-in-out: fade-in-out 3s ease-in-out infinite;
 }
