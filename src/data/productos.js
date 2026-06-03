@@ -1,1 +1,156 @@
-export const productos = [];
+export const productos = [
+	{
+		id: 1,
+		nombre: 'Notebook Lenovo IdeaPad 3 15ITL6 i5 8GB 512GB',
+		marca: 'Lenovo',
+		categoria: 'Notebooks',
+		precio: 749900,
+		stock: 6,
+		imagen: 'https://via.placeholder.com/400x300?text=Notebook+Lenovo',
+		descripcion:
+			'Notebook pensada para estudio y trabajo con pantalla de 15.6 pulgadas, procesador Intel Core i5 y almacenamiento SSD. Incluye WiFi 6, webcam HD y teclado numerico para productividad diaria.',
+	},
+	{
+		id: 2,
+		nombre: 'Mouse Logitech G203 Lightsync RGB 8000 DPI',
+		marca: 'Logitech',
+		categoria: 'Mouse',
+		precio: 38990,
+		stock: 18,
+		imagen: 'https://via.placeholder.com/400x300?text=Mouse+Logitech',
+		descripcion:
+			'Mouse gamer liviano con sensor de alta precision, seis botones programables y RGB sincronizable. Ideal para juegos competitivos y uso diario con deslizamiento suave.',
+	},
+	{
+		id: 3,
+		nombre: 'Mouse Razer DeathAdder Essential 6400 DPI',
+		marca: 'Razer',
+		categoria: 'Mouse',
+		precio: 52990,
+		stock: 12,
+		imagen: 'https://via.placeholder.com/400x300?text=Mouse+Razer',
+		descripcion:
+			'Mouse ergonomico con sensor optico preciso y switches duraderos. Su forma clasica reduce la fatiga en sesiones largas de juego o trabajo.',
+	},
+	{
+		id: 4,
+		nombre: 'Mouse HyperX Pulsefire Core 6200 DPI',
+		marca: 'HyperX',
+		categoria: 'Mouse',
+		precio: 44990,
+		stock: 10,
+		imagen: 'https://via.placeholder.com/400x300?text=Mouse+HyperX',
+		descripcion:
+			'Mouse con sensor optico Pixart, base de deslizamiento y personalizacion por software. Ideal para shooters y tareas de precision.',
+	},
+	{
+		id: 5,
+		nombre: 'Monitor Samsung 24" F24T350 Full HD 75Hz IPS',
+		marca: 'Samsung',
+		categoria: 'Monitores',
+		precio: 219900,
+		stock: 7,
+		imagen: 'https://via.placeholder.com/400x300?text=Monitor+Samsung',
+		descripcion:
+			'Monitor IPS de 24 pulgadas con bordes delgados, 75Hz y tecnologia FreeSync. Excelente para estudio, trabajo y entretenimiento diario.',
+	},
+	{
+		id: 6,
+		nombre: 'Monitor LG 27" 27MP400 Full HD 75Hz',
+		marca: 'LG',
+		categoria: 'Monitores',
+		precio: 259900,
+		stock: 5,
+		imagen: 'https://via.placeholder.com/400x300?text=Monitor+LG',
+		descripcion:
+			'Pantalla de 27 pulgadas con panel IPS, modo lectura y tecnologia de reduccion de parpadeo. Ideal para largas jornadas frente a la PC.',
+	},
+	{
+		id: 7,
+		nombre: 'PC de escritorio Armada Ryzen 5 5600G 16GB 1TB SSD',
+		marca: 'AMD',
+		categoria: 'PC Escritorio',
+		precio: 889900,
+		stock: 3,
+		imagen: 'https://via.placeholder.com/400x300?text=PC+Escritorio',
+		descripcion:
+			'Equipo completo para trabajo y gaming casual con graficos integrados Radeon. Incluye gabinete con flujo de aire y fuente certificada para uso estable.',
+	},
+	{
+		id: 8,
+		nombre: 'Procesador Intel Core i5-12400F 6C/12T 4.4GHz',
+		marca: 'Intel',
+		categoria: 'Procesadores',
+		precio: 239900,
+		stock: 9,
+		imagen: 'https://via.placeholder.com/400x300?text=Intel+i5',
+		descripcion:
+			'CPU de 12va generacion con seis nucleos y doce hilos. Excelente para gaming y productividad, requiere placa de video dedicada.',
+	},
+	{
+		id: 9,
+		nombre: 'Procesador AMD Ryzen 5 5600 6C/12T 4.4GHz',
+		marca: 'AMD',
+		categoria: 'Procesadores',
+		precio: 214900,
+		stock: 11,
+		imagen: 'https://via.placeholder.com/400x300?text=Ryzen+5+5600',
+		descripcion:
+			'Procesador con seis nucleos y doce hilos, ideal para gaming en 1080p y edicion liviana. Compatible con motherboards AM4.',
+	},
+	{
+		id: 10,
+		nombre: 'Procesador Intel Core i3-12100 4C/8T 4.3GHz',
+		marca: 'Intel',
+		categoria: 'Procesadores',
+		precio: 129900,
+		stock: 13,
+		imagen: 'https://via.placeholder.com/400x300?text=Intel+i3',
+		descripcion:
+			'CPU eficiente para armado de PC de entrada con buen rendimiento en tareas diarias y gaming liviano.',
+	},
+	{
+		id: 11,
+		nombre: 'Placa de video NVIDIA GeForce RTX 4060 8GB GDDR6',
+		marca: 'NVIDIA',
+		categoria: 'Placas de video',
+		precio: 579900,
+		stock: 4,
+		imagen: 'https://via.placeholder.com/400x300?text=RTX+4060',
+		descripcion:
+			'GPU con soporte para ray tracing y DLSS 3. Ideal para 1080p y 1440p con altas tasas de cuadros.',
+	},
+	{
+		id: 12,
+		nombre: 'Placa de video AMD Radeon RX 7600 8GB GDDR6',
+		marca: 'AMD',
+		categoria: 'Placas de video',
+		precio: 469900,
+		stock: 6,
+		imagen: 'https://via.placeholder.com/400x300?text=RX+7600',
+		descripcion:
+			'Grafica pensada para gaming en 1080p con gran relacion precio rendimiento. Incluye soporte para tecnologias modernas de escalado.',
+	},
+	{
+		id: 13,
+		nombre: 'Placa de video NVIDIA GeForce GTX 1650 4GB GDDR6',
+		marca: 'NVIDIA',
+		categoria: 'Placas de video',
+		precio: 239900,
+		stock: 8,
+		imagen: 'https://via.placeholder.com/400x300?text=GTX+1650',
+		descripcion:
+			'GPU de entrada para eSports y tareas multimedia. Bajo consumo y compatible con fuentes de baja potencia.',
+	},
+	{
+		id: 14,
+		nombre: 'Placa de video AMD Radeon RX 6650 XT 8GB GDDR6',
+		marca: 'AMD',
+		categoria: 'Placas de video',
+		precio: 399900,
+		stock: 5,
+		imagen: 'https://via.placeholder.com/400x300?text=RX+6650+XT',
+		descripcion:
+			'Placa orientada a 1080p alto y 1440p medio. Buen equilibrio entre potencia y eficiencia para juegos modernos.',
+	},
+];
