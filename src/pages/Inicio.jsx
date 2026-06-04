@@ -36,6 +36,23 @@ const Inicio = () => {
           </Link>
         </div>
       </div>
+
+      <section className="mt-4 mb-20">
+        <h3 className="text-3xl font-black italic tracking-tighter text-center mb-12 uppercase">
+          Nuestros productos estrella 
+        </h3>
+
+        <section className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5"> 
+            <p className="text-center"> ELEGIR 3 PARA MOSTRAR ACA</p>
+            <p className="text-center"> ELEGIR 3 PARA MOSTRAR ACA</p>
+            <p className="text-center"> ELEGIR 3 PARA MOSTRAR ACA</p>
+        </section>
+
+      </section>
+
+
+
+
         <section className="py-16 px-6 max-w-4xl mx-auto text-center">
           <div className="w-24 h-24 bg-bg-dark dark:bg-bg-light mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-xl rotate-3 hover:rotate-0 transition-transform">
               <Link to="/">

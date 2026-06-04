@@ -7,8 +7,7 @@ import logoParaFondoOscuro from "../assets/logo-oscuro.png";
 function SobreNosotros() {
   const {tema, toggleTema} = useTheme();
   return (
-    <main className="max-w-6xl bg-white dark:bg-bg-dark mx-auto px-4 pt-28 pb-16  text-text-light dark:text-text-dark ">
-     <div> 
+    <main className="min-h-screen bg-white dark:bg-bg-dark mx-auto px-4 pt-16 md:pt-28 pb-10 md:pb-16 text-text-light dark:text-text-dark">     <div> 
       <section className="text-center mb-20">
         <h2 className="text-4xl md:text-5xl font-black italic tracking-tighter mb-4 uppercase">
           ¿Quiénes somos? <span className="text-hover-light">1001</span>
