@@ -36,7 +36,6 @@ const Inicio = () => {
           </Link>
         </div>
       </div>
-        {/* IDENTIDAD */}
         <section className="py-16 px-6 max-w-4xl mx-auto text-center">
           <div className="w-24 h-24 bg-bg-dark dark:bg-bg-light mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-xl rotate-3 hover:rotate-0 transition-transform">
               <Link to="/">
