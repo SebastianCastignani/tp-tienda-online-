@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Inicio from './pages/Inicio'
 import SobreNosotros from './pages/SobreNosotros'
 import Productos from './pages/Productos'
@@ -17,6 +18,8 @@ function App() {
         <Route path="/productos" element={<Productos />} />
         <Route path="/productos/:id" element={<DetalleProducto />} />
       </Routes>
+
+      <Footer /> {/* Se mantiene fijo en todas las páginas */}
     </>
   )
 }
