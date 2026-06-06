@@ -5,12 +5,36 @@ import { FiSearch, FiShoppingCart, FiMenu, FiMoon, FiSun } from "react-icons/fi"
 import logoParaFondoClaro from "../assets/logo-claro.png";
 import logoParaFondoOscuro from "../assets/logo-oscuro.png";
 import { DiVim } from "react-icons/di";
+import { useRef, useEffect } from "react";
+import { useCarrito } from "../context/CarritoContext";
+import CarritoItem from "./CarritoItem";
 
 
 function Header() {
   const {tema, toggleTema} = useTheme();
   const [menuAbierto, setMenuAbierto] = useState(false);
   const [buscando, setBuscando] = useState(false);
+  const [carritoAbierto, setCarritoAbierto] = useState(false);
+  const { carrito, eliminarDelCarrito } = useCarrito();
+  const carritoRef = useRef();
+
+  useEffect(() => {
+    const cerrar = (e) => {
+      if (
+        carritoRef.current &&
+        !carritoRef.current.contains(e.target)
+      ) {
+        setCarritoAbierto(false);
+      }
+    };
+
+    document.addEventListener("mousedown", cerrar);
+
+    return () => {
+      document.removeEventListener("mousedown", cerrar);
+    };
+  }, []);
+
 
   return (
     <header className="bg-bg-light dark:bg-bg-dark shadow-md">
@@ -52,7 +76,49 @@ function Header() {
                 <Link to="#" className="text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark">CONTACTO</Link>
               </nav>
               <button onClick={toggleTema}>{tema === "light" ? <FiMoon className="text-xl text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark cursor-pointer" /> : <FiSun className="text-xl text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark cursor-pointer" />}</button>
-              <Link to="#" className="relative"><FiShoppingCart className="text-xl text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark" /></Link>
+              <div className="relative" ref={carritoRef}>
+                <button
+                  onClick={() => setCarritoAbierto(!carritoAbierto)}
+                  className="relative cursor-pointer"
+                >
+                  <FiShoppingCart className="text-xl text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark" />
+
+                  {carrito.length > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] rounded-full px-1.5 py-0.5">
+                      {carrito.length}
+                    </span>
+                  )}
+                </button>
+
+                {carritoAbierto && (
+                  <div className="absolute right-0 mt-3 w-[350px] max-h-[500px] overflow-y-auto bg-bg-light dark:bg-bg-dark border border-slate-300 dark:border-slate-700 rounded-xl shadow-xl p-3 z-50">
+
+                    <Link
+                      to="/carrito"
+                      onClick={() => setCarritoAbierto(false)}
+                      className="block w-full text-center mb-3 bg-hover-light hover:bg-hover-dark text-white py-2 rounded-lg font-semibold"
+                    >
+                      Ver carrito
+                    </Link>
+
+                    <div className="flex flex-col gap-2">
+                      {carrito.length === 0 ? (
+                        <p className="text-center text-text-light dark:text-text-dark">
+                          Carrito vacío
+                        </p>
+                      ) : (
+                        carrito.map((producto) => (
+                          <CarritoItem
+                            key={producto.id}
+                            producto={producto}
+                            onEliminar={eliminarDelCarrito}
+                          />
+                        ))
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
               <button className="md:hidden" onClick={() => setBuscando(true)}><FiSearch className="text-xl text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark cursor-pointer" /></button>
               <button className="md:hidden p-2" onClick={() => setMenuAbierto(!menuAbierto)}><FiMenu className="text-xl text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark cursor-pointer" /></button>
             </div>

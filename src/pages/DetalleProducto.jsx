@@ -1,9 +1,11 @@
 import { Link, useParams } from 'react-router-dom';
 import { productos } from '../data/productos';
+import { useCarrito } from "../context/CarritoContext";
 
 export default function DetalleProducto() {
   const { id } = useParams();
   const producto = productos.find((item) => item.id === Number(id));
+  const { agregarAlCarrito } = useCarrito();
 
   if (!producto) {
     return (
@@ -59,6 +61,7 @@ export default function DetalleProducto() {
           <button
             className="mt-2 w-fit rounded-[10px] bg-hover-light px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-hover-dark"
             type="button"
+            onClick={() => agregarAlCarrito(producto)}
           >
             Añadir al carrito
           </button>
