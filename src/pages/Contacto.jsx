@@ -44,7 +44,7 @@ export default function Contacto() {
 
   return (
     <div className="min-h-screen bg-bg-light dark:bg-bg-dark flex items-center justify-center">
-      <div className="w-full bg-white dark:bg-gray-900 shadow-lg md:px-96 md:py-12 px-6 py-8">
+      <div className="w-full bg-white dark:bg-gray-900 md:px-96 md:py-12 px-6 py-8">
         <h1 className="text-3xl font-bold text-center text-text-light dark:text-text-dark mb-2">Contacto</h1>
         <p className="text-center text-gray-500 dark:text-gray-400 mb-8">Ante cualquier duda o inconveniente, complete el siguiente formulario para comunicarse con nosotros</p>
 
