@@ -30,7 +30,7 @@ function Footer() {
 
                 <div className="flex flex-col items-center gap-3 px-8 py-4">
                     <Link to="/sobre-nosotros"><button className="text-text-dark dark:text-text-light hover:text-hover-dark dark:hover:text-hover-light bg-text-light dark:bg-text-dark border-none font-bold p-2 rounded-md cursor-pointer transition-all duration-300">NOSOTROS</button></Link>
-                    <Link to=""><button className="text-text-dark dark:text-text-light hover:text-hover-dark dark:hover:text-hover-light bg-text-light dark:bg-text-dark border-none font-bold p-2 rounded-md cursor-pointer transition-all duration-300">CONTACTO</button></Link>
+                    <Link to="/contacto"><button className="text-text-dark dark:text-text-light hover:text-hover-dark dark:hover:text-hover-light bg-text-light dark:bg-text-dark border-none font-bold p-2 rounded-md cursor-pointer transition-all duration-300">CONTACTO</button></Link>
                     <a className="text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark border-none font-bold underline cursor-pointer transition-all duration-300">Términos y Condiciones</a>
                 </div>
 
