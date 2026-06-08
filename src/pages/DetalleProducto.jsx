@@ -1,11 +1,14 @@
 import { Link, useParams } from 'react-router-dom';
 import { productos } from '../data/productos';
 import { useCarrito } from "../context/CarritoContext";
+import { useState } from "react";
+import SelectorCantidad from "../components/SelectorCantidad";
 
 export default function DetalleProducto() {
   const { id } = useParams();
   const producto = productos.find((item) => item.id === Number(id));
   const { agregarAlCarrito } = useCarrito();
+  const [cantidad, setCantidad] = useState(1);
 
   if (!producto) {
     return (
@@ -60,13 +63,21 @@ export default function DetalleProducto() {
           <p className="font-semibold text-slate-900 dark:text-slate-100">
             Stock: {producto.stock}
           </p>
-          <button
-            className="mt-2 w-fit rounded-[10px] bg-hover-light px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-hover-dark dark:bg-blue-500 dark:hover:bg-blue-600"
-            type="button"
-            onClick={() => agregarAlCarrito(producto)}
-          >
-            Añadir al carrito
-          </button>
+          <div className="mt-2 flex items-center gap-3">
+            <SelectorCantidad
+              cantidad={cantidad}
+              setCantidad={setCantidad}
+              max={producto.stock}
+            />
+
+            <button
+              className="rounded-[10px] bg-hover-light px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-hover-dark dark:bg-blue-500 dark:hover:bg-blue-600"
+              type="button"
+              onClick={() => agregarAlCarrito(producto, cantidad)}
+            >
+              Añadir al carrito
+            </button>
+          </div>
         </div>
       </section>
     </main>

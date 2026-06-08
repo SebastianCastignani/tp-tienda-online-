@@ -1,11 +1,18 @@
 import { FiTrash2 } from "react-icons/fi";
+import SelectorCantidad from "./SelectorCantidad";
 
-export default function CarritoItem({ producto, onEliminar }) {
+export default function CarritoItem({
+  producto,
+  onEliminar,
+  onActualizarCantidad,
+}) {
   const formatter = new Intl.NumberFormat("es-AR", {
     style: "currency",
     currency: "ARS",
     maximumFractionDigits: 0,
   });
+
+  const subtotal = producto.precio * producto.cantidad;
 
   return (
     <article className="flex items-center gap-3 p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 w-full">
@@ -20,10 +27,22 @@ export default function CarritoItem({ producto, onEliminar }) {
           {producto.nombre}
         </h3>
 
+        <p className="text-sm text-text-light dark:text-text-dark">
+          Cantidad: {producto.cantidad}
+        </p>
+
         <p className="font-bold text-hover-light">
-          {formatter.format(producto.precio)}
+          {formatter.format(subtotal)}
         </p>
       </div>
+
+      <SelectorCantidad
+        cantidad={producto.cantidad}
+        setCantidad={(nuevaCantidad) =>
+          onActualizarCantidad(producto.id, nuevaCantidad)
+        }
+        max={producto.stock}
+      />
 
       <button
         onClick={() => onEliminar(producto.id)}
