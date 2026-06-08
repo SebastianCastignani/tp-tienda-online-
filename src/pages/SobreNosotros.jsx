@@ -30,16 +30,11 @@ function SobreNosotros() {
         </div>
        
         <div className="relative h-64 bg-gradient-to-br from-purple-600 to-indigo-900 rounded-2xl flex items-center justify-center shadow-xl overflow-hidden relative group">
-          <div className="absolute right-0 top-0 w-full h-full font-mono text-[20px] text-purple-300/10 leading-none select-none pointer-events-none break-all [mask-image:linear-gradient(to_left,white,transparent)] group-hover:scale-105 transition-transform duration-700 overflow-hidden text-right">
-            1001010101010010101010101010101010101010101010101010010101010101010101
-            0101010101010010101010101010101010101010101010101010010101010101010101
-            1001010101010010101010101010101010101010101010101010010101010101010101
-            0101010101010010101010101010101010101010101010101010010101010101010101
-            1001010101010010101010101010101010101010101010101010010101010101010101
-            0101010101010010101010101010101010101010101010101010010101010101010101
-            1001010101010010101010101010101010101010101010101010010101010101010101
-            0101010101010010101010101010101010101010101010101010010101010101010101
-            </div>
+        <div className="absolute inset-0 font-mono text-[18px] text-purple-300/10 leading-none select-none pointer-events-none break-all [mask-image:linear-gradient(to_left,white,transparent)] group-hover:scale-105 transition-transform duration-700 overflow-hidden">
+            {Array.from({ length: 50 }).map((_, i) => (
+              <span key={i}>1001010101010010101010101010101010101010101010101010010101010101010101</span>
+            ))}
+          </div>
         <div className="z-10 flex items-center justify-center bg-slate-950/40 p-2 rounded-2xl border border-white/5 backdrop-blur-sm shadow-inner">
             <img 
                 src={tema === "light" ? logoParaFondoClaro : logoParaFondoOscuro} 
