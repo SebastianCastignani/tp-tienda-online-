@@ -10,6 +10,7 @@
     --color-text-dark: #F3EFFF;
     --color-hover-light: #7A49A5;
     --color-hover-dark: #A855F7;
+    --color-center-dark: #1f2937; /* coincide con dark:bg-slate-800 */
 
 
     @keyframes fade-in-out {
@@ -17,4 +18,19 @@
         15%, 85% { opacity: 1; transform: translateY(0); }
     }
     --animate-fade-in-out: fade-in-out 3s ease-in-out infinite;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: var(--color-bg-light);
+    color: var(--color-text-light);
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+:where(.dark) body {
+    background: var(--color-center-dark);
+    color: var(--color-text-dark);
 }

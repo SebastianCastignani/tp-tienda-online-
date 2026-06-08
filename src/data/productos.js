@@ -6,7 +6,7 @@ export const productos = [
 		categoria: 'Notebooks',
 		precio: 749900,
 		stock: 6,
-		imagen: 'https://via.placeholder.com/400x300?text=Notebook+Lenovo',
+		imagen: '/img/notebook_lenovo_ideapad3.png',
 		descripcion:
 			'Notebook pensada para estudio y trabajo con pantalla de 15.6 pulgadas, procesador Intel Core i5 y almacenamiento SSD. Incluye WiFi 6, webcam HD y teclado numerico para productividad diaria.',
 	},
@@ -17,7 +17,7 @@ export const productos = [
 		categoria: 'Mouse',
 		precio: 38990,
 		stock: 18,
-		imagen: 'https://via.placeholder.com/400x300?text=Mouse+Logitech',
+		imagen: '/img/mouse_logitech_g203.png',
 		descripcion:
 			'Mouse gamer liviano con sensor de alta precision, seis botones programables y RGB sincronizable. Ideal para juegos competitivos y uso diario con deslizamiento suave.',
 	},
@@ -28,7 +28,7 @@ export const productos = [
 		categoria: 'Mouse',
 		precio: 52990,
 		stock: 12,
-		imagen: 'https://via.placeholder.com/400x300?text=Mouse+Razer',
+		imagen: '/img/mouse_razer_deathadder_essential.png',
 		descripcion:
 			'Mouse ergonomico con sensor optico preciso y switches duraderos. Su forma clasica reduce la fatiga en sesiones largas de juego o trabajo.',
 	},
@@ -39,7 +39,7 @@ export const productos = [
 		categoria: 'Mouse',
 		precio: 44990,
 		stock: 10,
-		imagen: 'https://via.placeholder.com/400x300?text=Mouse+HyperX',
+		imagen: '/img/mouse_hyperx_pulsefire_core.png',
 		descripcion:
 			'Mouse con sensor optico Pixart, base de deslizamiento y personalizacion por software. Ideal para shooters y tareas de precision.',
 	},
@@ -50,7 +50,7 @@ export const productos = [
 		categoria: 'Monitores',
 		precio: 219900,
 		stock: 7,
-		imagen: 'https://via.placeholder.com/400x300?text=Monitor+Samsung',
+		imagen: '/img/monitor_samsung_24_f24t350.png',
 		descripcion:
 			'Monitor IPS de 24 pulgadas con bordes delgados, 75Hz y tecnologia FreeSync. Excelente para estudio, trabajo y entretenimiento diario.',
 	},
@@ -61,7 +61,7 @@ export const productos = [
 		categoria: 'Monitores',
 		precio: 259900,
 		stock: 5,
-		imagen: 'https://via.placeholder.com/400x300?text=Monitor+LG',
+		imagen: '/img/monitor_lg_27_27mp400.png',
 		descripcion:
 			'Pantalla de 27 pulgadas con panel IPS, modo lectura y tecnologia de reduccion de parpadeo. Ideal para largas jornadas frente a la PC.',
 	},
@@ -72,7 +72,7 @@ export const productos = [
 		categoria: 'PC Escritorio',
 		precio: 889900,
 		stock: 3,
-		imagen: 'https://via.placeholder.com/400x300?text=PC+Escritorio',
+		imagen: '/img/pc_de_escritorio_armada_ryzen_5_5600g.png',
 		descripcion:
 			'Equipo completo para trabajo y gaming casual con graficos integrados Radeon. Incluye gabinete con flujo de aire y fuente certificada para uso estable.',
 	},
@@ -83,7 +83,7 @@ export const productos = [
 		categoria: 'Procesadores',
 		precio: 239900,
 		stock: 9,
-		imagen: 'https://via.placeholder.com/400x300?text=Intel+i5',
+		imagen: '/img/procesador_intel_core_i5_12400f.png',
 		descripcion:
 			'CPU de 12va generacion con seis nucleos y doce hilos. Excelente para gaming y productividad, requiere placa de video dedicada.',
 	},
@@ -94,7 +94,7 @@ export const productos = [
 		categoria: 'Procesadores',
 		precio: 214900,
 		stock: 11,
-		imagen: 'https://via.placeholder.com/400x300?text=Ryzen+5+5600',
+		imagen: '/img/procesador_amd_ryzen_5_5600.png',
 		descripcion:
 			'Procesador con seis nucleos y doce hilos, ideal para gaming en 1080p y edicion liviana. Compatible con motherboards AM4.',
 	},
@@ -105,7 +105,7 @@ export const productos = [
 		categoria: 'Procesadores',
 		precio: 129900,
 		stock: 13,
-		imagen: 'https://via.placeholder.com/400x300?text=Intel+i3',
+		imagen: '/img/procesador_intel_core_i3_12100.png',
 		descripcion:
 			'CPU eficiente para armado de PC de entrada con buen rendimiento en tareas diarias y gaming liviano.',
 	},
@@ -116,7 +116,7 @@ export const productos = [
 		categoria: 'Placas de video',
 		precio: 579900,
 		stock: 4,
-		imagen: 'https://via.placeholder.com/400x300?text=RTX+4060',
+		imagen: '/img/Placa_de_video_NVIDIA_GeForce_RTX_4060.png',
 		descripcion:
 			'GPU con soporte para ray tracing y DLSS 3. Ideal para 1080p y 1440p con altas tasas de cuadros.',
 	},
@@ -127,7 +127,7 @@ export const productos = [
 		categoria: 'Placas de video',
 		precio: 469900,
 		stock: 6,
-		imagen: 'https://via.placeholder.com/400x300?text=RX+7600',
+		imagen: '/img/Placa_de_video_AMD_Radeon_RX_7600_8GB_GDDR6.png',
 		descripcion:
 			'Grafica pensada para gaming en 1080p con gran relacion precio rendimiento. Incluye soporte para tecnologias modernas de escalado.',
 	},
@@ -138,7 +138,7 @@ export const productos = [
 		categoria: 'Placas de video',
 		precio: 239900,
 		stock: 8,
-		imagen: 'https://via.placeholder.com/400x300?text=GTX+1650',
+		imagen: '/img/Placa_de_video_NVIDIA_GeForce_GTX_1650_4GB_GDDR6.png',
 		descripcion:
 			'GPU de entrada para eSports y tareas multimedia. Bajo consumo y compatible con fuentes de baja potencia.',
 	},
@@ -149,7 +149,7 @@ export const productos = [
 		categoria: 'Placas de video',
 		precio: 399900,
 		stock: 5,
-		imagen: 'https://via.placeholder.com/400x300?text=RX+6650+XT',
+		imagen: '/img/Placa_de_video_AMD_Radeon_RX_6650_XT_8GB_GDDR6.png',
 		descripcion:
 			'Placa orientada a 1080p alto y 1440p medio. Buen equilibrio entre potencia y eficiencia para juegos modernos.',
 	},
