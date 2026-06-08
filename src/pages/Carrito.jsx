@@ -2,7 +2,11 @@ import CarritoItem from "../components/CarritoItem";
 import { useCarrito } from "../context/CarritoContext";
 
 export default function Carrito() {
-  const { carrito, eliminarDelCarrito } = useCarrito();
+  const {
+    carrito,
+    eliminarDelCarrito,
+    actualizarCantidad,
+  } = useCarrito();
 
   const formatter = new Intl.NumberFormat("es-AR", {
     style: "currency",
@@ -33,6 +37,7 @@ export default function Carrito() {
                 key={producto.id}
                 producto={producto}
                 onEliminar={eliminarDelCarrito}
+                onActualizarCantidad={actualizarCantidad}
               />
             ))
           )}

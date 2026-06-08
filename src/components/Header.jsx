@@ -17,6 +17,10 @@ function Header() {
   const [carritoAbierto, setCarritoAbierto] = useState(false);
   const { carrito, eliminarDelCarrito } = useCarrito();
   const carritoRef = useRef();
+  const cantidadTotal = carrito.reduce(
+    (acc, item) => acc + item.cantidad,
+    0
+  );
 
   useEffect(() => {
     const cerrar = (e) => {
@@ -85,7 +89,7 @@ function Header() {
 
                   {carrito.length > 0 && (
                     <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] rounded-full px-1.5 py-0.5">
-                      {carrito.length}
+                      {cantidadTotal}
                     </span>
                   )}
                 </button>
