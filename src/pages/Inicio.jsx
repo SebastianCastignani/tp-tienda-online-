@@ -6,10 +6,13 @@ import InfoBanner from '../components/InfoBanner';
 import SobreNosotros from './SobreNosotros';
 import logoParaFondoClaro from "../assets/logo-claro.png";
 import logoParaFondoOscuro from "../assets/logo-oscuro.png";
+import { productos } from '../data/productos';
+import ProductoCard from '../components/ProductoCard';
+
 
 const Inicio = () => {
   const {tema, toggleTema} = useTheme();
-  
+  const productosEstrella = productos.slice(0, 3);
   return (
     <div className="min-h-screen bg-white dark:bg-bg-dark text-text-light dark:text-text-dark">
       <InfoBanner /> 
@@ -41,17 +44,13 @@ const Inicio = () => {
         <h3 className="text-3xl font-black italic tracking-tighter text-center mb-12 uppercase">
           Nuestros productos estrella 
         </h3>
-
-        <section className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5"> 
-            <p className="text-center"> ELEGIR 3 PARA MOSTRAR ACA</p>
-            <p className="text-center"> ELEGIR 3 PARA MOSTRAR ACA</p>
-            <p className="text-center"> ELEGIR 3 PARA MOSTRAR ACA</p>
-        </section>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5"> 
+          {productosEstrella.map((producto) => (
+             <ProductoCard key={producto.id} producto={producto} />
+          ))}
+        </div>
 
       </section>
-
-
-
 
         <section className="py-16 px-6 max-w-4xl mx-auto text-center">
           <div className="w-24 h-24 bg-bg-dark dark:bg-bg-light mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-xl rotate-3 hover:rotate-0 transition-transform">

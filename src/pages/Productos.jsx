@@ -20,3 +20,5 @@ export default function Productos() {
     </main>
   );
 }
+
+export default ProductoCard; 

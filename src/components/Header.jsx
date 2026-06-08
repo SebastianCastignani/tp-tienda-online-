@@ -77,7 +77,7 @@ function Header() {
               <nav className="hidden md:flex items-center gap-4 text-sm font-bold">
                 <Link to="/" className="text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark">INICIO</Link>
                 <Link to="/productos" className="text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark">PRODUCTOS</Link>
-                <Link to="#" className="text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark">CONTACTO</Link>
+                <Link to="/contacto" className="text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark">CONTACTO</Link>
               </nav>
               <button onClick={toggleTema}>{tema === "light" ? <FiMoon className="text-xl text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark cursor-pointer" /> : <FiSun className="text-xl text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark cursor-pointer" />}</button>
               <div className="relative" ref={carritoRef}>
@@ -135,7 +135,7 @@ function Header() {
         <div className="md:hidden border-t border-text-light/20 dark:border-text-dark/20 px-4 py-2">
           <Link to="/" className="font-bold block py-2 text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark" onClick={() => setMenuAbierto(false)}>INICIO</Link>
           <Link to="/productos" className="font-bold block py-2 text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark" onClick={() => setMenuAbierto(false)}>PRODUCTOS</Link>
-          <Link to="#" className="font-bold block py-2 text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark" onClick={() => setMenuAbierto(false)}>CONTACTO</Link>
+          <Link to="/contacto" className="font-bold block py-2 text-text-light dark:text-text-dark hover:text-hover-light dark:hover:text-hover-dark" onClick={() => setMenuAbierto(false)}>CONTACTO</Link>
         </div>
       )}
     </header>
