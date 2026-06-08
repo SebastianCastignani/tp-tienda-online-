@@ -21,4 +21,4 @@ export default function Productos() {
   );
 }
 
-export default ProductoCard; 
+//export default ProductoCard; 
