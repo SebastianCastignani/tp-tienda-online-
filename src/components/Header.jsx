@@ -84,7 +84,7 @@ function Header() {
               autoFocus
             />
             {resultadosBusqueda.length > 0 && (
-              <div className="absolute top-full left-0 right-0 bg-bg-white dark:bg-bg-dark border rounded-lg shadow-xl z-50 max-h-60 overflow-y-auto">
+              <div className="absolute top-full left-0 right-0 bg-bg-light dark:bg-bg-dark border rounded-lg shadow-xl z-50 max-h-60 overflow-y-auto">
                 {resultadosBusqueda.map((p) => (
                   <Link
                     to={`/productos/${p.id}`}
@@ -145,7 +145,7 @@ function Header() {
                 />
               </div>
               {resultadosBusqueda.length > 0 && (
-                <div className="absolute top-full left-0 right-0 bg-bg-white dark:bg-bg-dark border rounded-lg shadow-xl z-50 max-h-60 overflow-y-auto">
+                <div className="absolute top-full left-0 right-0 bg-bg-white bg-bg-light dark:bg-bg-dark border rounded-lg shadow-xl z-50 max-h-60 overflow-y-auto">
                   {resultadosBusqueda.map((p) => (
                     <Link
                       to={`/productos/${p.id}`}
