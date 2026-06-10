@@ -1,5 +1,6 @@
 import CarritoItem from "../components/CarritoItem";
 import { useCarrito } from "../context/CarritoContext";
+import { Link } from "react-router-dom";
 
 export default function Carrito() {
   const {
@@ -55,11 +56,13 @@ export default function Carrito() {
             </span>
           </p>
 
-          <button
-            className="w-full bg-hover-light hover:bg-hover-dark text-white py-3 rounded-lg font-semibold"
-          >
-            Proceder al pago
-          </button>
+          <Link to="/pago">
+            <button
+              className="w-full bg-hover-light hover:bg-hover-dark text-white py-3 rounded-lg font-semibold"
+            >
+              Proceder al pago
+            </button>
+          </Link>
         </aside>
       </div>
     </main>

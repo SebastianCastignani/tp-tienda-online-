@@ -36,6 +36,10 @@ export function CarritoProvider({ children }) {
     setCarrito((prev) => prev.filter((item) => item.id !== id));
   };
 
+  const vaciarCarrito = () => {
+    setCarrito([]);
+  };
+
   const actualizarCantidad = (id, cantidad) => {
     setCarrito((prev) =>
       prev.map((item) =>
@@ -58,6 +62,7 @@ export function CarritoProvider({ children }) {
         agregarAlCarrito,
         eliminarDelCarrito,
         actualizarCantidad,
+        vaciarCarrito,
       }}
     >
       {children}
