@@ -6,6 +6,8 @@ import Productos from './pages/Productos'
 import Contacto  from './pages/Contacto'
 import DetalleProducto from './pages/DetalleProducto'
 import Carrito from './pages/Carrito'
+import Pago from './pages/Pago';
+import PagoExitoso from './pages/PagoExitoso';
 import { Routes, Route } from 'react-router-dom';
 import './App.css'
 
@@ -21,6 +23,8 @@ function App() {
         <Route path="/productos/:id" element={<DetalleProducto />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/carrito" element={<Carrito />} />
+        <Route path="/pago" element={<Pago />} />
+        <Route path="/pago-exitoso" element={<PagoExitoso />} />
       </Routes>
 
       <Footer /> {/* Se mantiene fijo en todas las páginas */}
