@@ -15,15 +15,15 @@ export default function Pago() {
   };
 
   const estiloCard = (seleccionada) =>
-    `border rounded-xl p-4 cursor-pointer transition
+    `border rounded-xl p-4 cursor-pointer transition-colors
     ${
       seleccionada
-        ? "border-green-500 bg-green-100"
-        : "border-slate-300 hover:border-slate-500"
+        ? "border-green-500 bg-green-100 dark:bg-green-900/30 dark:border-green-400"
+        : "border-slate-300 dark:border-slate-700 hover:border-slate-500 dark:hover:border-slate-500"
     }`;
 
   return (
-    <main className="max-w-4xl mx-auto px-6 py-8">
+    <main className="max-w-4xl mx-auto px-6 py-8 text-text-light dark:text-text-dark">
       <h1 className="text-3xl font-bold mb-8">
         Finalizar compra
       </h1>
