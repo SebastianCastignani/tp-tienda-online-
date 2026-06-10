@@ -1,9 +1,16 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const CarritoContext = createContext();
 
 export function CarritoProvider({ children }) {
-  const [carrito, setCarrito] = useState([]);
+  const [carrito, setCarrito] = useState(() => {
+    const guardado = localStorage.getItem("carrito");
+    return guardado ? JSON.parse(guardado) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }, [carrito]);
 
   const agregarAlCarrito = (producto, cantidad = 1) => {
     setCarrito((prev) => {
@@ -12,13 +19,11 @@ export function CarritoProvider({ children }) {
       if (existe) {
         const nuevaCantidad = Math.min(
           existe.cantidad + cantidad,
-          producto.stock
+          producto.stock,
         );
 
         return prev.map((item) =>
-          item.id === producto.id
-            ? { ...item, cantidad: nuevaCantidad }
-            : item
+          item.id === producto.id ? { ...item, cantidad: nuevaCantidad } : item,
         );
       }
 
@@ -44,8 +49,8 @@ export function CarritoProvider({ children }) {
               ...item,
               cantidad: Math.max(1, Math.min(cantidad, item.stock)),
             }
-          : item
-      )
+          : item,
+      ),
     );
   };
 

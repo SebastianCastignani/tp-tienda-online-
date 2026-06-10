@@ -30,7 +30,7 @@ function Header() {
   const [menuAbierto, setMenuAbierto] = useState(false);
   const [buscando, setBuscando] = useState(false);
   const [carritoAbierto, setCarritoAbierto] = useState(false);
-  const { carrito, eliminarDelCarrito } = useCarrito();
+  const { carrito, eliminarDelCarrito, actualizarCantidad } = useCarrito();
   const carritoRef = useRef();
 
   const busquedaProductos = (e) => {
@@ -241,6 +241,7 @@ function Header() {
                             key={producto.id}
                             producto={producto}
                             onEliminar={eliminarDelCarrito}
+                            onActualizarCantidad={actualizarCantidad}
                           />
                         ))
                       )}
